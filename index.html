@@ -3,145 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serenity Massage Phuket</title>
-  <!-- ฟ้อนท์ Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Sarabun', sans-serif;
-      background: #f7fbfb;
-      color: #333;
-    }
-    header {
-      background: linear-gradient(135deg, #0bb, #0b84a5);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      margin-bottom: 15px;
-    }
-    nav {
-      background: white;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: #0b84a5;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #055e72;
-    }
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      background: #e6f7f7;
-    }
-    .hero h1 {
-      font-size: 2.2em;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2em;
-      color: #555;
-    }
-    .services {
-      max-width: 1000px;
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 0 20px;
-    }
-    .service-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
-    .service-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .service-card h3 {
-      margin: 15px 0 5px;
-      color: #0b84a5;
-    }
-    .service-card p {
-      margin: 0 0 15px;
-      color: #444;
-    }
-    footer {
-      background: #0b84a5;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+  <title>เมนูบริการ - Serenity Massage Phuket</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Serenity Logo">
-    <h1>Serenity Massage Phuket</h1>
-    <p>ผ่อนคลายหรูหรา ใจกลางป่าตอง</p>
+    <h1>🌸 รายการบริการของเรา</h1>
+    <nav>
+      <a href="index.html">หน้าแรก</a>
+      <a href="services.html">เมนูนวด</a>
+      <a href="about.html">ข้อมูลร้าน</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">หน้าแรก</a>
-    <a href="services.html">เมนูนวด</a>
-    <a href="about.html">ข้อมูลร้าน</a>
-    <a href="contact.html">ติดต่อเรา</a>
-  </nav>
+  <main>
+    <section class="services">
+      <div class="service-card">
+        <img src="images/foot-massage.jpg" alt="นวดเท้า">
+        <h3>👣 นวดเท้า</h3>
+        <p>250 บาท/ชั่วโมง</p>
+      </div>
 
-  <section class="hero">
-    <h1>🌸 ยินดีต้อนรับสู่ Serenity Massage</h1>
-    <p>บริการนวดและสปามาตรฐานโรงแรม 5 ดาว ในราคาที่จับต้องได้</p>
-  </section>
+      <div class="service-card">
+        <img src="images/thai-massage.jpg" alt="นวดไทย">
+        <h3>✋ นวดไทย</h3>
+        <p>300 บาท/ชั่วโมง</p>
+      </div>
 
-  <section class="services">
-    <div class="service-card">
-      <img src="massage1.jpg" alt="นวดไทย">
-      <h3>นวดไทย</h3>
-      <p>300 บาท / ชั่วโมง</p>
-    </div>
-    <div class="service-card">
-      <img src="massage2.jpg" alt="นวดอโรม่า">
-      <h3>นวดอโรม่า</h3>
-      <p>500 บาท / ชั่วโมง</p>
-    </div>
-    <div class="service-card">
-      <img src="massage3.jpg" alt="นวดน้ำมัน">
-      <h3>นวดน้ำมัน</h3>
-      <p>600 บาท / ชั่วโมง</p>
-    </div>
-    <div class="service-card">
-      <img src="massage4.jpg" alt="สปาขัดผิว">
-      <h3>สปาขัดผิว</h3>
-      <p>1,200 บาท</p>
-    </div>
-  </section>
+      <div class="service-card">
+        <img src="images/aroma-massage.jpg" alt="นวดน้ำมันอโรม่า">
+        <h3>🌺 นวดน้ำมันอโรม่า</h3>
+        <p>500 บาท/ชั่วโมง</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/luxury-aroma.jpg" alt="นวดอโรม่า Luxury">
+        <h3>💎 นวดอโรม่า Luxury</h3>
+        <p>600 บาท/ชั่วโมง</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/herbal-massage.jpg" alt="นวดประคบสมุนไพร">
+        <h3>🔥 นวดประคบสมุนไพร</h3>
+        <p>700 บาท/ชั่วโมง</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/swedish.jpg" alt="นวดสวีดิช">
+        <h3>✨ นวดสวีดิช</h3>
+        <p>800 บาท/ชั่วโมง</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/spa-scrub.jpg" alt="สปาตัว + สครับ">
+        <h3>🌿 สปาตัว + สครับ</h3>
+        <p>1,200 บาท</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/premium-course.jpg" alt="คอร์สนวดพรีเมียม">
+        <h3>😺 คอร์สนวดพรีเมียม (2 ชั่วโมง)</h3>
+        <p>1,500 บาท</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Serenity Massage Phuket | Designed with 💙
+    <p>© 2025 Serenity Massage Phuket</p>
   </footer>
 </body>
 </html>
