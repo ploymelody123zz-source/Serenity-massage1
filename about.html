@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ข้อมูลร้าน | Serenity Massage Phuket</title>
-  <style>
-    body { font-family: "Prompt", sans-serif; margin: 0; background: #f7f9f9; color: #333; }
-    header { background: linear-gradient(135deg, #1a2a6c, #0b84a5); color: white; text-align: center; padding: 30px 20px; }
-    nav { background: #fff; text-align: center; padding: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
-    nav a:hover { color: #0b84a5; }
-    main { max-width: 800px; margin: 30px auto; padding: 0 20px; }
-    h2 { text-align: center; margin-bottom: 20px; }
-    .info { font-size: 1.1em; line-height: 1.8; margin-bottom: 20px; }
-    iframe { width: 100%; height: 300px; border: none; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-    footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 15px; margin-top: 40px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เกี่ยวกับเรา | Serenity Massage Phuket</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>ข้อมูลร้าน Serenity Massage</h1>
-    <p>ติดต่อเราได้ที่นี่</p>
-  </header>
+<header class="topbar">
+  <a class="brand" href="index.html"><img class="logo" src="logo.png" alt=""><span class="title">Serenity Massage Phuket</span></a>
+  <div style="display:flex;gap:8px">
+    <a class="booking" href="services.html">BOOKING</a>
+    <button class="burger hide-desktop" onclick="openDrawer()"><span></span></button>
+  </div>
+</header>
 
-  <nav>
-    <a href="index.html">หน้าแรก</a>
-    <a href="services.html">เมนูนวด</a>
-    <a href="about.html">ข้อมูลร้าน</a>
-  </nav>
-
-  <main>
-    <h2>📍 ติดต่อเรา</h2>
-    <div class="info">
-      📞 โทร: 089-xxx-xxxx <br>
-      💬 LINE: <a href="https://lin.ee/xxxx" target="_blank">แอด LINE OA</a> <br>
-      ⏰ เปิดบริการ: 10.00 – 22.00 น.
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="shade" onclick="closeDrawer()"></div>
+  <div class="panel">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+      <button class="burger" onclick="closeDrawer()"><span></span></button>
     </div>
+    <nav class="menu">
+      <a href="index.html">หน้าแรก</a>
+      <a href="services.html">เมนูสปา</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="#contact">ติดต่อเรา</a>
+    </nav>
+  </div>
+</aside>
 
-    <h2>🗺️ แผนที่ร้าน</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.570392582605!2d98.29729831515227!3d7.888309192325365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b00722d0f0b%3A0xe9f7acfc9f24981e!2sSerenity%20massage%20at%20jungceylon!5e0!3m2!1sth!2sth!4v1738535500000" allowfullscreen loading="lazy"></iframe>
-  </main>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="circle"><img src="logo.png" alt="Serenity Logo"></div>
+    <h1>Our Story</h1>
+    <p>จากสตูดิโอเล็ก ๆ สู่บูทีคสปาที่แขกไว้วางใจในป่าตอง</p>
+  </div>
+</section>
 
-  <footer>
-    © 2025 Serenity Massage Phuket
-  </footer>
+<section class="section">
+  <h2 class="h2">Philosophy</h2>
+  <div class="story">
+    เราเชื่อว่าความผ่อนคลายที่ดีเริ่มจากรายละเอียดเล็ก ๆ — แสงที่อบอุ่น กลิ่นหอมอ่อน ๆ
+    ดนตรีที่ไม่รบกวน และสัมผัสมือที่มั่นใจ Serenity จึงพิถีพิถันตั้งแต่การเลือกผลิตภัณฑ์
+    ความสะอาดของพื้นที่ ไปจนถึงมาตรฐานการอบรมของเทอราปิสท์ เพื่อให้ทุกครั้งที่มา
+    คุณได้ “พักจริง ๆ” ทั้งกายและใจ
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="h2">Gallery</h2>
+  <div class="grid">
+    <figure class="card"><img src="images/massage-oil.jpg" alt=""><div class="pad"><h3>Oil Massage</h3></div></figure>
+    <figure class="card"><img src="images/foot.jpg" alt=""><div class="pad"><h3>Foot Therapy</h3></div></figure>
+    <figure class="card"><img src="images/hot-stone.jpg" alt=""><div class="pad"><h3>Hot Stone</h3></div></figure>
+    <figure class="card"><img src="images/facial.jpg" alt=""><div class="pad"><h3>Facial Care</h3></div></figure>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="cols">
+    <div><h4>Contact Us</h4><p>📞 <a href="tel:0890000000">089-xxx-xxxx</a></p><p>💬 <a href="https://line.me/R/ti/p/@076khewc" target="_blank">LINE OA</a></p></div>
+    <div><h4>Open Hours</h4><p>10:00 – 22:00 (Daily)</p></div>
+    <div><h4>Location</h4><p><a href="https://maps.app.goo.gl/" target="_blank">Patong, Phuket 83150</a></p></div>
+  </div>
+  <div class="copy">© 2025 Serenity Massage Phuket</div>
+</footer>
+
+<script>
+function openDrawer(){document.getElementById('drawer').classList.add('active')}
+function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
+</script>
 </body>
 </html>
