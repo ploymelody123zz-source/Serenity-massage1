@@ -80,3 +80,54 @@ body{
 .cols h4{margin:0 0 10px}
 .cols a{color:var(--teal-dark);text-decoration:none}
 .copy{border-top:1px solid #eef3f5;color:#7b8a95;padding:12px 16px;text-align:center}
+/* ---- Booking page ---- */
+.booking-hero{
+  background: radial-gradient(1200px 600px at 50% -200px, #0fb1b8 0%, #077d88 60%, #06606a 100%);
+  color:#fff; text-align:center; padding:64px 16px;
+}
+.booking-hero .hero-inner{ max-width:920px; margin:0 auto; }
+.booking-hero h1{ font-size: clamp(28px, 3.4vw, 44px); margin:0 0 8px; }
+.booking-hero p{ opacity:.95; }
+
+.wrap{ max-width:1100px; margin:32px auto; padding:0 16px; }
+.grid-2{ display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; }
+@media (max-width: 880px){ .grid-2{ grid-template-columns: 1fr; } }
+
+.card{ background:#fff; border-radius:16px; box-shadow: 0 10px 30px rgba(0,0,0,.06); padding:20px; }
+.card h2{ margin:0 0 8px; }
+.muted{ color:#5f6b73; font-size:.95rem; }
+
+.form-card form{ display:grid; gap:14px; }
+.form-card label{ display:grid; gap:6px; font-weight:600; }
+.form-card input, .form-card select, .form-card textarea{
+  width:100%; padding:12px 14px; border:1px solid #e3e7ea; border-radius:10px; font:inherit;
+  background:#f9fafb;
+}
+.row-2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:560px){ .row-2{ grid-template-columns:1fr; } }
+
+.btn{ display:inline-block; padding:12px 18px; border-radius:10px; text-decoration:none; border:0; cursor:pointer; }
+.btn-primary{ background:#0aa2a9; color:#fff; }
+.btn-danger{ background:#e1554a; color:#fff; }
+.btn-full{ width:100%; }
+.btn:hover{ filter:brightness(1.05); }
+
+.form-msg{ margin-top:6px; color:#0a7; font-weight:600; }
+
+.map-card .map-embed{ aspect-ratio: 4/3; background:#eaf2f4; border-radius:12px; overflow:hidden; }
+.map-card iframe{ width:100%; height:100%; border:0; display:block; }
+.contact-box{ display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; margin-top:12px; }
+
+/* ---- Global header/footer if not yet present ---- */
+.site-header{
+  display:flex; justify-content:space-between; align-items:center;
+  gap:16px; padding:14px 16px; background:#ffffffcc; backdrop-filter:saturate(120%) blur(8px);
+  position:sticky; top:0; z-index:50; border-bottom:1px solid #eef2f4;
+}
+.brand{ display:flex; align-items:center; gap:10px; color:#0d2b36; text-decoration:none; font-weight:800; }
+.brand-logo{ width:40px; height:40px; border-radius:50%; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+.nav{ display:flex; gap:12px; align-items:center; }
+.nav a{ color:#0d2b36; text-decoration:none; padding:8px 12px; border-radius:8px; }
+.nav a:hover{ background:#f3f6f7; }
+
+.site-footer{ text-align:center; padding:28px 12px; color:#5f6b73; }
