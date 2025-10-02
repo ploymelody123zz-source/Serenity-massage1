@@ -1,46 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Booking | Serenity Massage Phuket</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="assets/logo-serenity-circle.png" alt="Serenity Massage Phuket" class="brand-logo">
-      <span>Serenity Massage Phuket</span>
-    </a>
-    <nav class="nav">
-      <a href="index.html#treatments">Treatments</a>
-      <a href="about.html">About</a>
-      <a href="service.html">Services</a>
-      <a class="btn btn-danger" href="booking.html">BOOKING</a>
-    </nav>
-  </header>
 
-  <!-- HERO -->
-  <section class="booking-hero">
-    <div class="hero-inner">
-      <h1>Book Your Relaxation</h1>
-      <p>จองคิวกับเราได้ที่นี่ — Confirm in minutes.</p>
+<!-- Top bar (เหมือน index.html) -->
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img class="logo" src="logo.png" alt="Serenity Logo">
+    <span class="title">Serenity Massage Phuket</span>
+  </a>
+  <div style="display:flex;gap:8px">
+    <a class="booking" href="booking.html">BOOKING</a>
+    <button class="burger hide-desktop" aria-label="menu" onclick="openDrawer()"><span></span></button>
+  </div>
+</header>
+
+<!-- Drawer (เมนูมือถือ) -->
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="shade" onclick="closeDrawer()"></div>
+  <div class="panel">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+      <button class="burger" onclick="closeDrawer()" aria-label="close"><span></span></button>
     </div>
-  </section>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Spa Menu</a>
+      <a href="about.html">About Us</a>
+      <a href="#map">Map</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</aside>
 
-  <!-- FORM + MAP -->
-  <main class="wrap">
-    <div class="grid-2">
-      <!-- Booking Form -->
-      <section class="card form-card" id="booking-form">
-        <h2>Reservation Form</h2>
-        <p class="muted">กรอกข้อมูล แล้วกด Submit ✨</p>
+<!-- HERO (ใช้ .hero ให้แมตช์ CSS ปัจจุบัน) -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Book Your Relaxation</h1>
+    <p>จองคิวกับเราได้ที่นี่ — confirm in minutes.</p>
+  </div>
+</section>
 
-        <!-- NOTE:
-             - เปลี่ยน action เป็นปลายทางของคุณ (เช่น Formspree/Google Apps Script/Backend ของคุณ)
-             - ตอนนี้ตั้งค่าให้ไม่รีเฟรชหน้า และแสดงข้อความสำเร็จแทน
-        -->
+<!-- FORM + MAP -->
+<main class="section">
+  <h2 class="h2">Reservation</h2>
+  <p class="sub">กรอกข้อมูลด้านล่าง แล้วกด Submit ✨</p>
+
+  <!-- ใช้ .grid เดียวกับหน้าอื่น (มี 2 การ์ด) -->
+  <div class="grid">
+
+    <!-- Booking Form -->
+    <article class="card" id="booking-form">
+      <div class="pad">
+        <h3 style="margin:0 0 8px">Reservation Form</h3>
         <form id="reserveForm" action="#" method="post" novalidate>
           <label> Name – Surname
             <input type="text" name="name" placeholder="e.g., Jane Doe" required>
@@ -66,7 +82,6 @@
             <label> Date
               <input type="date" name="date" required>
             </label>
-
             <label> Time
               <input type="time" name="time" required>
             </label>
@@ -77,47 +92,75 @@
           </label>
 
           <button type="submit" class="btn btn-primary btn-full">✨ Submit ✨</button>
-          <p id="formMsg" class="form-msg" hidden>ขอบคุณค่ะ! เราได้รับรายละเอียดการจองแล้ว ทีมงานจะติดต่อยืนยันโดยเร็ว 💙</p>
+          <p id="formMsg" class="form-msg" hidden>
+            ขอบคุณค่ะ! เราได้รับรายละเอียดการจองแล้ว ทีมงานจะติดต่อยืนยันโดยเร็ว 💙
+          </p>
         </form>
-      </section>
+      </div>
+    </article>
 
-      <!-- Map -->
-      <section class="card map-card" id="map">
-        <h2>แผนที่ร้าน</h2>
-        <p class="muted">Serenity Massage at Jungceylon, Pa Tong, Kathu, Phuket 83150</p>
-        <div class="map-embed">
-          <!-- เปลี่ยน src เป็นลิงก์ Embed ของ Google Maps ร้านคุณเองได้ -->
-          <iframe
-            title="Serenity Massage at Jungceylon"
-            width="600" height="450" style="border:0"
-            loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Serenity%20massage%20at%20jungceylon&output=embed">
-          </iframe>
-        </div>
+    <!-- Map -->
+    <article class="card" id="map">
+      <div class="pad">
+        <h3 style="margin:0 0 8px">แผนที่ร้าน</h3>
+        <p class="muted" style="margin-top:0">
+          Serenity Massage at Jungceylon, Pa Tong, Kathu, Phuket 83150
+        </p>
+      </div>
+      <div class="map-box" style="box-shadow:none;border-radius:0">
+        <iframe
+          title="Serenity Massage at Jungceylon"
+          src="https://www.google.com/maps?q=Serenity%20massage%20at%20jungceylon&output=embed"
+          width="100%" height="360" style="border:0" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="pad" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <span><strong>Open:</strong> 10:30–22:30 daily</span>
+        <span><strong>Phone/LINE:</strong> 065-536-6749</span>
+        <a class="btn btn-primary" target="_blank"
+           href="https://maps.google.com/?q=Serenity%20Massage%20at%20Jungceylon">Open in Google Maps</a>
+      </div>
+    </article>
 
-        <div class="contact-box">
-          <p><strong>Open:</strong> 10:30–22:30 daily</p>
-          <p><strong>Phone/LINE:</strong> +66 … (ใส่เบอร์/ไลน์ของร้าน)</p>
-          <a class="btn" target="_blank" href="https://goo.gl/maps/">Open in Google Maps</a>
-        </div>
-      </section>
+  </div>
+</main>
+
+<!-- Footer ให้ใช้ของหน้า index (สี/โครงเดียวกัน) -->
+<footer class="footer" id="contact">
+  <div class="cols">
+    <div>
+      <h4>Serenity Massage Phuket</h4>
+      <p>Patong, Kathu, Phuket 83150</p>
+      <p>Open daily 11:00am – 02:00am</p>
     </div>
-  </main>
+    <div>
+      <h4>Contact</h4>
+      <p>📞 <a href="tel:0655366749">065-536-6749</a></p>
+      <p>💬 <a href="https://line.me/R/ti/p/@076khewc" target="_blank" rel="noopener">Add LINE OA</a></p>
+      <p>📍 <a href="https://maps.google.com/?q=Serenity%20Massage%20Patong" target="_blank" rel="noopener">Google Map</a></p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="services.html">Spa Menu</a></p>
+      <p><a href="about.html">About</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2025 Serenity Massage Phuket • All rights reserved</div>
+</footer>
 
-  <footer class="site-footer">
-    © Serenity Massage
-  </footer>
+<script>
+  function openDrawer(){document.getElementById('drawer').classList.add('active')}
+  function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
 
-  <script>
-    // Demo submit (ไม่ส่งออกนอก) — โชว์ข้อความสำเร็จ
-    document.getElementById('reserveForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const msg = document.getElementById('formMsg');
-      msg.hidden = false;
-      msg.scrollIntoView({behavior: 'smooth', block: 'center'});
-      // TODO: เปลี่ยนไปใช้ fetch() POST ไปปลายทางจริงของคุณ
-    });
-  </script>
+  // Demo submit — โชว์ข้อความสำเร็จ (ถ้าจะส่งจริง เปลี่ยนเป็น fetch() ไปปลายทางของคุณ)
+  document.getElementById('reserveForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const msg = document.getElementById('formMsg');
+    msg.hidden = false;
+    msg.scrollIntoView({behavior: 'smooth', block: 'center'});
+  });
+</script>
+
 </body>
 </html>
