@@ -1,106 +1,306 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serenity Massage Phuket | หน้าแรก</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Serenity Massage Phuket | สปา & นวดผ่อนคลาย</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+/* ========= Base ========= */
+:root{
+  --teal:#0b84a5;      /* ฟ้าเขียวหลัก */
+  --teal-dark:#0a6f8b;
+  --gold:#d7b56d;      /* แต้มทองนิดๆให้หรู */
+  --ink:#2b3340;
+  --bg:#f6fbfc;
+  --card:#ffffff;
+  --muted:#6b7a86;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:'Prompt',system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
+
+/* ========= Top Bar ========= */
+.topbar{
+  position:sticky;top:0;z-index:30;
+  background:#fff;
+  border-bottom:1px solid #e7eff2;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 16px;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;color:var(--ink);
+}
+.brand .logo{
+  width:52px;height:52px;border-radius:50%;
+  object-fit:cover;
+  border:4px solid #fff;
+  box-shadow:
+    0 4px 18px rgba(0,0,0,.18),
+    0 0 18px rgba(255,255,255,.65); /* เงาขาวนุ่ม */
+}
+.brand .title{font-weight:600}
+.booking{
+  background:#d94a4a;color:#fff;border:0;border-radius:10px;
+  padding:10px 14px;font-weight:600;
+  box-shadow:0 6px 14px rgba(217,74,74,.22);
+}
+.burger{
+  width:40px;height:40px;border-radius:10px;border:1px solid #e2ecef;
+  background:#fff;display:grid;place-items:center;margin-left:8px;
+}
+.burger span{width:18px;height:2px;background:#6b7a86;display:block;position:relative}
+.burger span:before,.burger span:after{content:"";position:absolute;left:0;right:0;height:2px;background:#6b7a86}
+.burger span:before{top:-6px}.burger span:after{top:6px}
+
+/* ========= Drawer Menu ========= */
+.drawer{
+  position:fixed;inset:0;display:none;z-index:40;
+}
+.drawer.active{display:block}
+.drawer .shade{position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.drawer .panel{
+  position:absolute;inset:0 0 0 auto;width:min(88vw,420px);
+  background:#fff;overflow:auto;padding:18px 16px 32px;
+}
+.langs{display:flex;gap:12px;margin-bottom:8px;opacity:.85}
+.menu a{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 10px;border-bottom:1px solid #f1f5f6;
+  color:var(--ink);text-decoration:none;font-weight:500;
+}
+.menu a:hover{background:#f8fbfc}
+
+/* ========= Hero ========= */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#0bb7c4 0%, #0b84a5 65%);
+}
+.hero-inner{
+  max-width:1100px;margin:auto;padding:42px 16px 28px;text-align:center;color:#fff;
+}
+.hero .circle{
+  width:160px;height:160px;border-radius:50%;margin:8px auto 18px;overflow:hidden;
+  border:6px solid rgba(255,255,255,.9);
+  box-shadow:0 18px 36px rgba(0,0,0,.22), 0 0 30px rgba(255,255,255,.45);
+  background:#fff;
+}
+.hero .circle img{width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:clamp(26px,5.6vw,44px);margin:6px 0 6px}
+.hero p{opacity:.95;margin:0 0 16px}
+
+/* ========= Sections ========= */
+.section{max-width:1100px;margin:auto;padding:28px 16px}
+.h2{
+  font-size:clamp(20px,4.4vw,32px);text-align:center;margin:6px 0 18px;
+}
+.sub{color:var(--muted);text-align:center;margin-top:-6px;margin-bottom:20px}
+
+/* badges (จุดเด่น) */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.feature{
+  background:var(--card);border-radius:14px;padding:18px;text-align:center;
+  box-shadow:0 8px 24px rgba(11,132,165,.07);
+}
+.feature .icon{font-size:28px;margin-bottom:10px}
+.feature h3{margin:6px 0 4px;font-size:18px}
+.feature p{margin:0;color:var(--muted);font-size:14px}
+
+/* story */
+.story{
+  background:#fff;border-radius:16px;padding:18px 18px 8px;
+  box-shadow:0 10px 26px rgba(0,0,0,.06);
+  line-height:1.8;color:#3b4652
+}
+
+/* services cards */
+.grid{
+  display:grid;gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+.card{
+  background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 10px 26px rgba(0,0,0,.08);transition:transform .2s;
+}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:160px;object-fit:cover}
+.card .pad{padding:14px}
+.card h3{margin:0 0 4px;color:var(--teal)}
+.card .price{color:#b82d2d;font-weight:600}
+
+/* info columns */
+.footer{
+  background:#fff;border-top:1px solid #e7eff2;margin-top:24px
+}
+.cols{max-width:1100px;margin:auto;padding:22px 16px;display:grid;gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cols h4{margin:0 0 10px}
+.cols a{color:var(--teal-dark);text-decoration:none}
+.copy{border-top:1px solid #eef3f5;color:#7b8a95;padding:12px 16px;text-align:center}
+
+/* helper */
+.btn-outline{
+  display:inline-block;border:2px solid #fff;color:#fff;text-decoration:none;
+  padding:10px 16px;border-radius:12px;font-weight:600
+}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.hide-desktop{display:inline-block}
+@media (min-width:920px){
+  .hide-desktop{display:none}
+}
+</style>
 </head>
 <body>
 
-  <!-- TOPBAR -->
+<!-- ===== Top bar ===== -->
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="logo.png" alt="Serenity Logo">
-    <span>Serenity Massage</span>
+  <a class="brand" href="#">
+    <img class="logo" src="logo.png" alt="Serenity Massage Logo" />
+    <span class="title">Serenity Massage Phuket</span>
   </a>
-
-  <!-- ปุ่มจอง (ปรับลิงก์ได้) -->
-  <a class="book-btn" href="services.html">จองคิว</a>
-
-  <!-- ปุ่มแฮมเบอร์เกอร์ -->
-  <button id="menuBtn" class="hamburger" aria-label="menu" style="background:transparent;border:0">
-    <span></span><span></span><span></span>
-  </button>
+  <div style="display:flex;gap:8px">
+    <a class="booking" href="services.html">BOOKING</a>
+    <button class="burger hide-desktop" aria-label="เมนู" onclick="openDrawer()"><span></span></button>
+  </div>
 </header>
 
-<!-- DRAWER -->
+<!-- ===== Drawer ===== -->
 <aside id="drawer" class="drawer" aria-hidden="true">
-  <header>
-    <div class="lang">
-      <img class="flag" src="https://flagcdn.com/w20/th.png" alt="TH">
-      <img class="flag" src="https://flagcdn.com/w20/us.png" alt="EN">
-      <img class="flag" src="https://flagcdn.com/w20/jp.png" alt="JP">
+  <div class="shade" onclick="closeDrawer()"></div>
+  <div class="panel">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+      <button class="burger" onclick="closeDrawer()" aria-label="ปิดเมนู"><span></span></button>
     </div>
-  </header>
-  <ul>
-    <li><a href="index.html">หน้าแรก</a></li>
-    <li><a href="services.html">เมนูนวด</a></li>
-    <li><a href="about.html">ข้อมูลร้าน</a></li>
-    <!-- เพิ่มรายการอื่นได้ตามต้องการ -->
-  </ul>
+    <div class="langs">🇺🇸 🇹🇭 🇨🇳 🇯🇵</div>
+    <nav class="menu">
+      <a href="index.html">หน้าแรก</a>
+      <a href="services.html">เมนูสปา</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="about.html#contact">ติดต่อเรา</a>
+    </nav>
+  </div>
 </aside>
-<div id="backdrop" class="backdrop"></div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <!-- FOOTER -->
-<footer class="footer">
-  <div class="foot-grid">
-    <div>
-      <div class="foot-title">Serenity Massage Phuket</div>
-      <div>เลขที่ … ถนน … ภูเก็ต 83xxx</div>
-      <div class="social">
-        <a class="badge" href="https://line.me/R/ti/p/@076khewc">LINE</a>
-        <a class="badge" href="#">Facebook</a>
-        <a class="badge" href="#">Instagram</a>
-      </div>
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="circle"><img src="images/hero.jpg" alt="บรรยากาศสปา"></div>
+    <h1>LET’S RELAX • Serenity Style</h1>
+    <p>สปาและนวดผ่อนคลายมาตรฐาน ในบรรยากาศหรูสงบใจกลางป่าตอง ภูเก็ต</p>
+    <a class="btn-outline" href="services.html">ดูเมนูสปา →</a>
+  </div>
+</section>
+
+<!-- ===== About / Story short ===== -->
+<section class="section">
+  <h2 class="h2">เกี่ยวกับเรา</h2>
+  <p class="sub">Serenity Massage Phuket — ก่อตั้งโดยทีมเทอราปิสท์มากประสบการณ์ ตั้งใจมอบ “ความผ่อนคลายที่เข้าถึงได้”</p>
+  <div class="story">
+    เริ่มจากร้านนวดเล็ก ๆ ที่ป่าตอง เราคัดสรรผลิตภัณฑ์ที่อ่อนโยนต่อผิว
+    ออกแบบพื้นที่ให้สงบ สว่าง สะอาด สะท้อนเสน่ห์แบบไทยร่วมสมัย
+    ทุกทรีตเมนต์ดำเนินโดยผู้เชี่ยวชาญที่ผ่านการอบรมเข้มข้น
+    เพื่อให้คุณเดินออกไปด้วยรอยยิ้มและความเบาสบายทุกครั้ง ✨
+  </div>
+</section>
+
+<!-- ===== Features ===== -->
+<section class="section">
+  <h2 class="h2">จุดเด่นของเรา</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="icon">🕯️</div>
+      <h3>บูทีคดีไซน์</h3>
+      <p>โทนฟ้า-เขียวสงบ แต้มทองอุ่น ๆ หรูดูแพง</p>
     </div>
-
-    <div>
-      <div class="foot-title">เมนูหลัก</div>
-      <ul class="foot-list">
-        <li><a href="index.html">หน้าแรก</a></li>
-        <li><a href="services.html">เมนูนวด</a></li>
-        <li><a href="about.html">ข้อมูลร้าน</a></li>
-      </ul>
+    <div class="feature">
+      <div class="icon">🌿</div>
+      <h3>ผลิตภัณฑ์คัดสรร</h3>
+      <p>ออยล์และบาล์มคุณภาพ กลิ่นหอมผ่อนคลาย</p>
     </div>
-
-    <div>
-      <div class="foot-title">ติดต่อเรา</div>
-      <ul class="foot-list">
-        <li>โทร: 089-xxx-xxxx</li>
-        <li><a href="https://maps.app.goo.gl/xxxx">Google Maps</a></li>
-        <li><a href="mailto:info@serenity.example">info@serenity.example</a></li>
-      </ul>
+    <div class="feature">
+      <div class="icon">👩‍⚕️</div>
+      <h3>เทอราปิสท์มืออาชีพ</h3>
+      <p>ผ่านการอบรมทั้งทฤษฎีและปฏิบัติอย่างเข้ม</p>
     </div>
-
-    <div>
-      <div class="foot-title">เวลาเปิด</div>
-      <ul class="foot-list">
-        <li>ทุกวัน 10:00 – 22:00 น.</li>
-      </ul>
+    <div class="feature">
+      <div class="icon">🫖</div>
+      <h3>เสิร์ฟชาหอมหวาน</h3>
+      <p>เติมความสุขเล็ก ๆ ปิดท้ายทุกคอร์ส</p>
     </div>
   </div>
-  <p style="margin-top:14px;color:#888">© 2025 Serenity Massage Phuket</p>
+</section>
+
+<!-- ===== Highlight services grid ===== -->
+<section class="section">
+  <h2 class="h2">เมนูสปาแนะนำ</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="images/massage-oil.jpg" alt="นวดน้ำมันอโรม่า">
+      <div class="pad">
+        <h3>นวดน้ำมันอโรม่า</h3>
+        <div class="price">500 บาท / ชม.</div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/hot-stone.jpg" alt="นวดหินร้อน">
+      <div class="pad">
+        <h3>นวดหินร้อน</h3>
+        <div class="price">700 บาท / ชม.</div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/foot.jpg" alt="นวดเท้า">
+      <div class="pad">
+        <h3>นวดเท้า</h3>
+        <div class="price">250 บาท / ชม.</div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/facial.jpg" alt="ทรีตเมนต์หน้า Luxury">
+      <div class="pad">
+        <h3>ทรีตเมนต์หน้า Luxury</h3>
+        <div class="price">1,600 บาท / 60 นาที</div>
+      </div>
+    </article>
+  </div>
+  <div style="text-align:center;margin-top:12px">
+    <a class="btn-outline" style="border-color:var(--teal);color:var(--teal)" href="services.html">ดูทั้งหมด</a>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer" id="contact">
+  <div class="cols">
+    <div>
+      <h4>Serenity Massage Phuket</h4>
+      <p>ป่าตอง กะทู้ ภูเก็ต 83150</p>
+      <p>เวลาเปิดบริการ 10.00 – 22.00 น.</p>
+    </div>
+    <div>
+      <h4>ติดต่อเรา</h4>
+      <p>📞 <a href="tel:0890000000">089-xxx-xxxx</a></p>
+      <p>💬 <a href="https://line.me/R/ti/p/@076khewc" target="_blank" rel="noopener">แอด LINE OA</a></p>
+      <p>📍 <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener">ดูแผนที่ Google</a></p>
+    </div>
+    <div>
+      <h4>เมนู</h4>
+      <p><a href="index.html">หน้าแรก</a></p>
+      <p><a href="services.html">เมนูสปา</a></p>
+      <p><a href="about.html">เกี่ยวกับเรา</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2025 Serenity Massage Phuket • สงวนลิขสิทธิ์</div>
 </footer>
 
-<!-- JS: toggle drawer -->
 <script>
-  const btn = document.getElementById('menuBtn');
-  const drawer = document.getElementById('drawer');
-  const backdrop = document.getElementById('backdrop');
-
-  function openMenu(){ drawer.classList.add('open'); backdrop.classList.add('show'); }
-  function closeMenu(){ drawer.classList.remove('open'); backdrop.classList.remove('show'); }
-
-  btn.addEventListener('click', openMenu);
-  backdrop.addEventListener('click', closeMenu);
-  // ปิดเมื่อกดลิงก์ในเมนู
-  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+  function openDrawer(){document.getElementById('drawer').classList.add('active')}
+  function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
 </script>
-  </footer>
-
 </body>
 </html>
