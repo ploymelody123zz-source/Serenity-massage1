@@ -8,48 +8,98 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- TOPBAR -->
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="logo.png" alt="Serenity Logo">
+    <span>Serenity Massage</span>
+  </a>
+
+  <!-- ปุ่มจอง (ปรับลิงก์ได้) -->
+  <a class="book-btn" href="services.html">จองคิว</a>
+
+  <!-- ปุ่มแฮมเบอร์เกอร์ -->
+  <button id="menuBtn" class="hamburger" aria-label="menu" style="background:transparent;border:0">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- DRAWER -->
+<aside id="drawer" class="drawer" aria-hidden="true">
   <header>
-    <img src="logo.png" alt="Serenity Logo" class="logo">
-    <h1>Serenity Massage Phuket</h1>
-    <p>สัมผัสประสบการณ์ผ่อนคลาย หรูหรา ใจกลางป่าตอง</p>
-    <nav>
-      <a href="index.html">หน้าแรก</a>
-      <a href="services.html">เมนูนวด</a>
-      <a href="about.html">ข้อมูลร้าน</a>
-    </nav>
+    <div class="lang">
+      <img class="flag" src="https://flagcdn.com/w20/th.png" alt="TH">
+      <img class="flag" src="https://flagcdn.com/w20/us.png" alt="EN">
+      <img class="flag" src="https://flagcdn.com/w20/jp.png" alt="JP">
+    </div>
   </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>💆 ยินดีต้อนรับสู่ Serenity Massage</h2>
-    <p>
-      Serenity Massage Phuket ก่อตั้งขึ้นเพื่อมอบการผ่อนคลายระดับพรีเมียม  
-      โดยทีมงานมืออาชีพ พร้อมบรรยากาศที่ผสมผสานความหรูหราและธรรมชาติ  
-      เพื่อให้คุณได้พักผ่อนอย่างแท้จริง
-    </p>
-    <a href="services.html" class="btn">✨ จองบริการของคุณ ✨</a>
-  </section>
-
-  <!-- Highlight -->
-  <section class="highlights">
-    <div class="highlight-card">
-      <h3>🌿 นวดไทย</h3>
-      <p>ฟื้นฟูร่างกายและจิตใจตามภูมิปัญญาไทยโบราณ</p>
-    </div>
-    <div class="highlight-card">
-      <h3>🌸 นวดอโรม่า</h3>
-      <p>ผ่อนคลายพร้อมกลิ่นหอมจากน้ำมันอโรม่า</p>
-    </div>
-    <div class="highlight-card">
-      <h3>💎 คอร์สพรีเมียม</h3>
-      <p>ประสบการณ์สุดหรูที่ออกแบบมาเพื่อคุณโดยเฉพาะ</p>
-    </div>
+  <ul>
+    <li><a href="index.html">หน้าแรก</a></li>
+    <li><a href="services.html">เมนูนวด</a></li>
+    <li><a href="about.html">ข้อมูลร้าน</a></li>
+    <!-- เพิ่มรายการอื่นได้ตามต้องการ -->
+  </ul>
+</aside>
+<div id="backdrop" class="backdrop"></div>
   </section>
 
   <!-- Footer -->
   <footer>
-    © 2025 Serenity Massage Phuket
+    <!-- FOOTER -->
+<footer class="footer">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-title">Serenity Massage Phuket</div>
+      <div>เลขที่ … ถนน … ภูเก็ต 83xxx</div>
+      <div class="social">
+        <a class="badge" href="https://line.me/R/ti/p/@076khewc">LINE</a>
+        <a class="badge" href="#">Facebook</a>
+        <a class="badge" href="#">Instagram</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="foot-title">เมนูหลัก</div>
+      <ul class="foot-list">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="services.html">เมนูนวด</a></li>
+        <li><a href="about.html">ข้อมูลร้าน</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="foot-title">ติดต่อเรา</div>
+      <ul class="foot-list">
+        <li>โทร: 089-xxx-xxxx</li>
+        <li><a href="https://maps.app.goo.gl/xxxx">Google Maps</a></li>
+        <li><a href="mailto:info@serenity.example">info@serenity.example</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="foot-title">เวลาเปิด</div>
+      <ul class="foot-list">
+        <li>ทุกวัน 10:00 – 22:00 น.</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:14px;color:#888">© 2025 Serenity Massage Phuket</p>
+</footer>
+
+<!-- JS: toggle drawer -->
+<script>
+  const btn = document.getElementById('menuBtn');
+  const drawer = document.getElementById('drawer');
+  const backdrop = document.getElementById('backdrop');
+
+  function openMenu(){ drawer.classList.add('open'); backdrop.classList.add('show'); }
+  function closeMenu(){ drawer.classList.remove('open'); backdrop.classList.remove('show'); }
+
+  btn.addEventListener('click', openMenu);
+  backdrop.addEventListener('click', closeMenu);
+  // ปิดเมื่อกดลิงก์ในเมนู
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+</script>
   </footer>
 
 </body>
