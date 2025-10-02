@@ -1,151 +1,123 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>เมนูสปา | Serenity Massage Phuket</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บริการนวด | Serenity Massage Phuket</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: 'Prompt', sans-serif; margin:0; background:#f8fdfd; color:#333; }
+    header { background: linear-gradient(135deg, #0bb, #0b84a5); color:white; padding:15px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+    h2 { text-align:center; margin:25px 0; color:#0b6675; }
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition:transform .2s;
+    }
+    .card:hover { transform: scale(1.03); }
+    .card img { width:100%; height:180px; object-fit:cover; }
+    .card-body { padding:15px; text-align:center; }
+    .card-body h3 { margin:10px 0; font-size:1.2em; color:#0b6675; }
+    .price { color:#d9534f; font-size:1.1em; font-weight:bold; }
+    footer { text-align:center; padding:15px; background:#0b6675; color:white; margin-top:30px; }
+  </style>
 </head>
 <body>
 
-<header class="topbar">
-  <a class="brand" href="index.html"><img class="logo" src="logo.png" alt=""><span class="title">Serenity Massage Phuket</span></a>
-  <a class="booking" href="booking.html">BOOKING</a>
+<header>
+  <h1>Serenity Massage Phuket</h1>
+  <nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="services.html">เมนูนวด</a>
+    <a href="about.html">ข้อมูลร้าน</a>
+  </nav>
 </header>
 
-<section class="hero small hero-gradient">
-  <div class="hero-inner">
-    <h1 style="margin:0">Spa Menu</h1>
-    <p class="tagline">รายการและราคาจากเมนูหน้าร้าน — Multilingual</p>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="h2">Body Massage</h2>
-  <p class="sub">ราคามาตรฐานต่อชั่วโมง • Standard price per hour</p>
-
-  <div class="grid">
-    <article class="card">
-      <h3>THAI MASSAGE — นวดไทย</h3>
-      <p class="desc">中文: 泰式按摩 • Рус: Тайский массаж • العربية: تدليك تايلاندي • हिंदी: थाई मसाज</p>
-      <p class="price">300 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>OIL MASSAGE — นวดน้ำมัน</h3>
-      <p class="desc">中文: 精油按摩 • Рус: Масляный массаж • العربية: تدليك بالزيت • हिंदी: तेल मालिश</p>
-      <p class="price">350 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>FOOT MASSAGE — นวดเท้า</h3>
-      <p class="desc">中文: 足部按摩 • Рус: Массаж ног • العربية: تدليك القدم • हिंदी: पैर की मालिश</p>
-      <p class="price">300 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>THAI + OIL MASSAGE — นวดไทย + ออย</h3>
-      <p class="desc">中文: 泰式+精油按摩 • Рус: Тайский + масляный массаж • العربية: تاي + زيت • हिंदी: थाई + ऑयल</p>
-      <p class="price">400 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>SPORT MASSAGE — นวดสปอร์ต</h3>
-      <p class="desc">中文: 运动按摩 • Рус: Спортивный массаж • العربية: تدليك رياضي • हिंदी: स्पोर्ट मसाज</p>
-      <p class="price">500 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>HEAD + BACK & NECK — นวดหัว+หลัง+คอ</h3>
-      <p class="desc">中文: 头部/背/颈 • Рус: Голова/спина/шея • العربية: رأس+ظهر+رقبة • हिंदी: सिर+पीठ+गर्दन</p>
-      <p class="price">500 THB / hour</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="h2">Oil / Gel / Cream Treatments</h2>
-  <div class="grid">
-    <article class="card">
-      <h3>COCONUT OIL MASSAGE — นวดน้ำมันมะพร้าว</h3>
-      <p class="desc">中文: 椰子油按摩 • Рус: Кокосовый массаж • العربية: تدليك بزيت جوز الهند • हिंदी: नारियल तेल मसाज</p>
-      <p class="price">500 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>ALOE VERA MASSAGE — นวดเจลว่านหางจระเข้</h3>
-      <p class="desc">中文: 芦荟按摩 • Рус: Массаж с алоэ • العربية: جل الصبار • हिंदी: एलोवेरा मसाज</p>
-      <p class="price">500 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>MILK CREAM MASSAGE — นวดครีมน้ำนม</h3>
-      <p class="desc">中文: 牛奶霜按摩 • Рус: Молочный крем • العربية: كريم الحليب • हिंदी: मिल्क क्रीम मसाज</p>
-      <p class="price">400 THB / hour</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="h2">Facial & Foot Care • ทำเล็บ</h2>
-  <div class="grid">
-    <article class="card">
-      <h3>FACIAL MASSAGE — นวดหน้า</h3>
-      <p class="desc">中文: 面部按摩 • Рус: Массаж лица • العربية: تدليك الوجه • हिंदी: फेस मसाज</p>
-      <p class="price">500 THB / hour</p>
-    </article>
-
-    <article class="card">
-      <h3>FOOT SCRUB — ขัดเท้า</h3>
-      <p class="desc">中文: 足部去角质 • Рус: Скраб для ног • العربية: تقشير القدم • हिंदी: फुट स्क्रब</p>
-      <p class="price">400 THB</p>
-    </article>
-
-    <article class="card">
-      <h3>PEDICURE — ตัดเล็บเท้า</h3>
-      <p class="desc">中文: 修脚 • Рус: Педикюр • العربية: باديكير • हिंदी: पेडीक्योर</p>
-      <p class="price">250 THB</p>
-    </article>
-
-    <article class="card">
-      <h3>MANICURE — ตัดเล็บมือ</h3>
-      <p class="desc">中文: 美甲 • Рус: Маникюр • العربية: مانيكير • हिंदी: मैनीक्योर</p>
-      <p class="price">250 THB</p>
-    </article>
-  </div>
-
-  <div style="text-align:center;margin-top:12px">
-    <a class="btn btn-primary" href="booking.html">จองคิว / Book Now</a>
-  </div>
-</section>
-
-<footer class="footer" id="contact">
-  <div class="cols">
-    <div>
-      <h4>Serenity Massage Phuket</h4>
-      <p>Patong, Kathu, Phuket 83150</p>
-      <p>Open daily 11:00am – 02:00am</p>
+<main>
+  <h2>🌸 รายการบริการของเรา 🌸</h2>
+  <div class="services-container">
+    
+    <div class="card">
+      <img src="images/foot-massage.jpg" alt="นวดเท้า">
+      <div class="card-body">
+        <h3>🦶 นวดเท้า</h3>
+        <p class="price">250 บาท/ชั่วโมง</p>
+      </div>
     </div>
-    <div>
-      <h4>จองคิว</h4>
-      <p>📞 <a href="tel:0655366749">065-536-6749</a></p>
-      <p>💬 <a href="https://line.me/R/ti/p/@076khewc" target="_blank" rel="noopener">LINE OA</a></p>
-      <p>📍 <a href="https://maps.google.com/?q=Serenity%20Massage%20Patong" target="_blank" rel="noopener">Google Map</a></p>
+
+    <div class="card">
+      <img src="images/thai-massage.jpg" alt="นวดไทย">
+      <div class="card-body">
+        <h3>🤲 นวดไทย</h3>
+        <p class="price">300 บาท/ชั่วโมง</p>
+      </div>
     </div>
-    <div>
-      <h4>เมนูด่วน</h4>
-      <p><a href="index.html">หน้าแรก</a></p>
-      <p><a href="about.html">เกี่ยวกับเรา</a></p>
-      <p><a href="services.html">เมนูสปา</a></p>
+
+    <div class="card">
+      <img src="images/aroma-massage.jpg" alt="นวดน้ำมันอโรม่า">
+      <div class="card-body">
+        <h3>🌺 นวดน้ำมันอโรม่า</h3>
+        <p class="price">500 บาท/ชั่วโมง</p>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="images/luxury-aroma.jpg" alt="นวดอโรม่า Luxury">
+      <div class="card-body">
+        <h3>💎 นวดอโรม่า Luxury</h3>
+        <p class="price">600 บาท/ชั่วโมง</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/herbal-massage.jpg" alt="นวดประคบสมุนไพร">
+      <div class="card-body">
+        <h3>🔥 นวดประคบสมุนไพร</h3>
+        <p class="price">700 บาท/ชั่วโมง</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/swedish-massage.jpg" alt="นวดสวีดิช">
+      <div class="card-body">
+        <h3>✨ นวดสวีดิช</h3>
+        <p class="price">800 บาท/ชั่วโมง</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/spa-scrub.jpg" alt="สปาตัว + สครับ">
+      <div class="card-body">
+        <h3>🌿 สปาตัว + สครับ</h3>
+        <p class="price">1,200 บาท</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/premium-course.jpg" alt="คอร์สนวดพรีเมียม">
+      <div class="card-body">
+        <h3>👑 คอร์สนวดพรีเมียม (2 ชม.)</h3>
+        <p class="price">1,500 บาท</p>
+      </div>
+    </div>
+
   </div>
-  <div class="copy">© 2025 Serenity Massage Phuket • All rights reserved</div>
+</main>
+
+<footer>
+  © 2025 Serenity Massage Phuket
 </footer>
 
-<script>
-function openDrawer(){document.getElementById('drawer').classList.add('active')}
-function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
-</script>
 </body>
 </html>
