@@ -77,4 +77,67 @@ footer {
 .service-card p {
   font-size: 1em;
   color: #e60000;
+}/* ===== Topbar (โลโก้ + ปุ่มเมนู) ===== */
+.topbar{
+  position: sticky; top:0; z-index:1000;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 16px; background:#fff; border-bottom:1px solid #eee;
+}
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand img{ width:40px; height:40px; border-radius:50%; box-shadow:0 4px 15px rgba(0,0,0,.2),0 0 18px rgba(255,255,255,.5); border:3px solid #fff; }
+.brand span{ font-weight:700; font-size:18px; color:#0b6b79; letter-spacing:.3px; }
+
+.book-btn{
+  background:#c43; color:#fff; border:none; border-radius:10px;
+  padding:8px 14px; font-weight:700; text-decoration:none;
+}
+.hamburger{ width:28px; height:22px; display:grid; gap:5px; }
+.hamburger span{ display:block; height:3px; background:#333; border-radius:3px; }
+
+/* ===== Drawer (เมนูสไลด์ข้าง) ===== */
+.drawer{
+  position:fixed; inset:0 auto 0 0; width:78%; max-width:360px;
+  background:#faf7f5; box-shadow:2px 0 18px rgba(0,0,0,.15);
+  transform:translateX(-100%); transition:transform .25s ease;
+  z-index:1300; overflow-y:auto;
+}
+.drawer.open{ transform:none; }
+.drawer header{ padding:18px 16px; border-bottom:1px solid #eee; }
+.drawer .lang{ display:flex; gap:10px; }
+.flag{ width:22px; height:22px; border-radius:50%; border:1px solid #ddd; }
+
+.drawer ul{ list-style:none; padding:8px 0 24px; margin:0; }
+.drawer li{ border-bottom:1px solid #eee; }
+.drawer a{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 16px; text-decoration:none; color:#5a463f; font-size:16px;
+}
+.drawer a:hover{ background:#fff; }
+
+/* ฉากทึบหลังเมนู */
+.backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,.35);
+  opacity:0; visibility:hidden; transition:opacity .2s; z-index:1200;
+}
+.backdrop.show{ opacity:1; visibility:visible; }
+
+/* ===== Footer หลายคอลัมน์ ===== */
+.footer{
+  background:#fff; border-top:1px solid #eee; margin-top:40px;
+  padding:28px 18px;
+}
+.foot-grid{
+  display:grid; gap:18px;
+  grid-template-columns:1fr 1fr;
+}
+.foot-title{ font-weight:700; margin-bottom:10px; color:#5a463f; }
+.foot-list{ margin:0; padding:0; list-style:none; }
+.foot-list li{ margin:6px 0; }
+.foot-list a{ color:#5a463f; text-decoration:none; }
+.foot-list a:hover{ text-decoration:underline; }
+.social{ display:flex; gap:14px; margin-top:8px; }
+.badge{ padding:6px 10px; border-radius:20px; background:#f2f2f2; font-size:14px; }
+
+@media (min-width:900px){
+  .foot-grid{ grid-template-columns:2fr 1fr 1fr 1fr; }
 }
