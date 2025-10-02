@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Serenity Massage Phuket | Spa & Wellness</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
+<!-- Top bar -->
 <header class="topbar">
   <a class="brand" href="index.html">
     <img class="logo" src="logo.png" alt="Serenity Logo">
@@ -20,6 +21,7 @@
   </div>
 </header>
 
+<!-- Drawer -->
 <aside id="drawer" class="drawer" aria-hidden="true">
   <div class="shade" onclick="closeDrawer()"></div>
   <div class="panel">
@@ -36,39 +38,123 @@
   </div>
 </aside>
 
-<!-- HERO: พื้นไล่เฉด + โลโก้กลม -->
-<section class="hero hero-gradient">
+<!-- Hero -->
+<section class="hero">
   <div class="hero-inner">
-    <div class="circle">
-      <img src="assets/logo-serenity-circle.png" alt="Serenity mark" onerror="this.style.display='none'">
-    </div>
+    <img class="hero-mark" src="assets/logo-serenity-circle.png" alt="Serenity Massage">
     <h1>Serenity Massage Phuket</h1>
-    <p class="tagline">Calming boutique spa in Patong — premium treatments, warm service, and true relaxation.</p>
+    <p>Calming boutique spa in Patong — premium treatments, warm service, and true relaxation.</p>
     <a class="btn-outline" href="services.html">Explore Treatments</a>
   </div>
 </section>
 
-<!-- About / ประวัติความเป็นมา -->
+<!-- About -->
 <section class="section">
   <h2 class="h2">About Serenity</h2>
-  <p class="sub">
-    Born in Patong, crafted by experienced therapists. We deliver accessible luxury for everyday relaxation.
-  </p>
+  <p class="sub">Born in Patong, crafted by experienced therapists. We deliver accessible luxury for everyday relaxation.</p>
   <div class="story">
-    <strong>Our Story:</strong> Starting as a small studio in Jungceylon, we grew with one simple belief —
-    <em>every guest deserves a peaceful break.</em> We hand-pick gentle products, keep the space bright and spotless,
-    and train our therapists intensively so you leave lighter and happier. ✨
-    <br><br>
-    <strong>Slogan:</strong> Accessible luxury • Warm service • True relaxation.
+    Starting as a small studio, Serenity has grown with a simple belief:
+    every guest deserves a peaceful break. We select gentle products, keep the
+    space bright and spotless, and train our therapists intensively — so you leave lighter and happier. ✨
   </div>
 </section>
 
-<!-- Map (คงเดิม ถ้ามี) -->
+<!-- Why Us -->
+<section class="section">
+  <h2 class="h2">Why Guests Love Us</h2>
+  <div class="features">
+    <div class="feature"><div class="icon">🕯️</div><h3>Boutique Design</h3><p>Teal–gold palette, clean and elegant.</p></div>
+    <div class="feature"><div class="icon">🌿</div><h3>Selected Products</h3><p>Soothing oils & relaxing aromas.</p></div>
+    <div class="feature"><div class="icon">👩‍⚕️</div><h3>Skilled Therapists</h3><p>Well-trained in theory & practice.</p></div>
+    <div class="feature"><div class="icon">🫖</div><h3>Tea Ritual</h3><p>Sweet aromatic tea after treatment.</p></div>
+  </div>
+</section>
+
+<!-- Promotions -->
+<section class="section" id="promotions">
+  <h2 class="h2">Promotions</h2>
+  <p class="sub">Limited-time offers — show this page at the counter.</p>
+  <div class="grid">
+    <article class="card">
+      <img src="images/foot.jpg" alt="Foot Massage Promo">
+      <div class="pad">
+        <h3>Happy Feet</h3>
+        <p class="price">220 THB / 60 min</p>
+        <p class="desc">Weekdays before 4 PM · Foot massage to refresh after a long walk.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/massage-oil.jpg" alt="Aroma Promo">
+      <div class="pad">
+        <h3>Aroma Combo</h3>
+        <p class="price">900 THB / 2 hrs</p>
+        <p class="desc">Aroma oil (60m) + Head & Shoulder (60m) — full-body unwind.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/hot-stone.jpg" alt="Hot Stone Promo">
+      <div class="pad">
+        <h3>Stone & Steam</h3>
+        <p class="price">1,200 THB / 90 min</p>
+        <p class="desc">Hot-stone therapy with warm compress focus on back & shoulders.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Highlighted Treatments -->
+<section class="section">
+  <h2 class="h2">Highlighted Treatments</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="images/massage-oil.jpg" alt="Oil Massage">
+      <div class="pad">
+        <h3>Oil Massage</h3>
+        <div class="price">350 THB / hr</div>
+        <p class="desc">Smooth, gliding strokes with warm essential oils to melt daily stress and improve sleep.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/Aroma-Therapy.jpg" alt="Aroma Therapy">
+      <div class="pad">
+        <h3>Aroma Therapy</h3>
+        <div class="price">500 THB / hr</div>
+        <p class="desc">Gentle essential-oil massage to calm the mind and improve sleep quality.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/foot.jpg" alt="Foot Massage">
+      <div class="pad">
+        <h3>Foot Massage</h3>
+        <div class="price">300 THB / hr</div>
+        <p class="desc">Reflex-focused footwork to boost circulation and revive tired legs after beach or shopping.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/facial.jpg" alt="Luxury Facial">
+      <div class="pad">
+        <h3>Luxury Facial</h3>
+        <div class="price">500 THB / 60 min</div>
+        <p class="desc">Cleanse, mask, and soothing facial massage for a radiant glow and deep hydration.</p>
+      </div>
+    </article>
+  </div>
+
+  <div style="text-align:center;margin-top:12px">
+    <a class="btn-outline" href="services.html">View Full Menu</a>
+  </div>
+</section>
+
+<!-- Map -->
 <section class="section" id="map">
   <h2 class="h2">Find Us</h2>
   <p class="sub">Patong, Kathu, Phuket 83150 · Open daily 11:00am – 02:00am</p>
   <div class="map-box">
-    <iframe title="Serenity Massage Phuket Map" src="https://www.google.com/maps?q=Serenity%20Massage%20Patong&output=embed"
+    <iframe title="Serenity Massage Phuket Map"
+      src="https://www.google.com/maps?q=Serenity%20Massage%20Patong&output=embed"
       width="100%" height="360" style="border:0" loading="lazy"></iframe>
   </div>
   <div class="map-links">
@@ -78,6 +164,7 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer" id="contact">
   <div class="cols">
     <div>
@@ -105,5 +192,6 @@
 function openDrawer(){document.getElementById('drawer').classList.add('active')}
 function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
 </script>
+
 </body>
 </html>
