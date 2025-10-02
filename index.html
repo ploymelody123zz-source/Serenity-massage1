@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Serenity Massage Phuket | Spa & Wellness</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Serenity Massage Phuket | Spa & Wellness</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <!-- Top bar -->
 <header class="topbar">
   <a class="brand" href="index.html">
@@ -16,7 +15,7 @@
     <span class="title">Serenity Massage Phuket</span>
   </a>
   <div style="display:flex;gap:8px">
-    <a class="booking" href="booking.html">BOOKING</a>
+    <a class="booking" href="services.html">BOOKING</a>
     <button class="burger hide-desktop" aria-label="menu" onclick="openDrawer()"><span></span></button>
   </div>
 </header>
@@ -41,25 +40,25 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
-    <img class="hero-mark" src="assets/logo-serenity-circle.png" alt="Serenity Massage">
+    <div class="circle"><img src="images/hero.jpg" alt="Spa ambience"></div>
     <h1>Serenity Massage Phuket</h1>
     <p>Calming boutique spa in Patong — premium treatments, warm service, and true relaxation.</p>
-    <a class="btn-outline" href="services.html">Explore Treatments</a>
+    <a class="btn-outline" href="services.html">Explore Treatments →</a>
   </div>
 </section>
 
-<!-- About -->
+<!-- About blurb -->
 <section class="section">
   <h2 class="h2">About Serenity</h2>
   <p class="sub">Born in Patong, crafted by experienced therapists. We deliver accessible luxury for everyday relaxation.</p>
   <div class="story">
     Starting as a small studio, Serenity has grown with a simple belief:
     every guest deserves a peaceful break. We select gentle products, keep the
-    space bright and spotless, and train our therapists intensively — so you leave lighter and happier. ✨
+    space bright and spotless, and train our therapists intensively—so you leave lighter and happier. ✨
   </div>
 </section>
 
-<!-- Why Us -->
+<!-- Why us -->
 <section class="section">
   <h2 class="h2">Why Guests Love Us</h2>
   <div class="features">
@@ -80,7 +79,7 @@
       <div class="pad">
         <h3>Happy Feet</h3>
         <p class="price">220 THB / 60 min</p>
-        <p class="desc">Weekdays before 4 PM · Foot massage to refresh after a long walk.</p>
+        <p style="margin:6px 0 0;color:#6b7a86">Weekdays before 4 PM · Foot massage to refresh after a long walk.</p>
       </div>
     </article>
     <article class="card">
@@ -88,7 +87,7 @@
       <div class="pad">
         <h3>Aroma Combo</h3>
         <p class="price">900 THB / 2 hrs</p>
-        <p class="desc">Aroma oil (60m) + Head & Shoulder (60m) — full-body unwind.</p>
+        <p style="margin:6px 0 0;color:#6b7a86">Aroma oil (60m) + Head & Shoulder (60m) — full-body unwind.</p>
       </div>
     </article>
     <article class="card">
@@ -96,31 +95,36 @@
       <div class="pad">
         <h3>Stone & Steam</h3>
         <p class="price">1,200 THB / 90 min</p>
-        <p class="desc">Hot-stone therapy with warm compress focus on back & shoulders.</p>
+        <p style="margin:6px 0 0;color:#6b7a86">Hot-stone therapy with warm compress focus on back & shoulders.</p>
       </div>
     </article>
   </div>
 </section>
 
-<!-- Highlighted Treatments -->
+<!-- Highlighted treatments with descriptions -->
 <section class="section">
   <h2 class="h2">Highlighted Treatments</h2>
+
   <div class="grid">
     <article class="card">
-      <img src="images/massage-oil.jpg" alt="Oil Massage">
+      <img src="images/massage-oil.jpg" alt="Aroma Oil Massage">
       <div class="pad">
-        <h3>Oil Massage</h3>
-        <div class="price">350 THB / hr</div>
-        <p class="desc">Smooth, gliding strokes with warm essential oils to melt daily stress and improve sleep.</p>
+        <h3>Aroma Oil Massage</h3>
+        <div class="price">500 THB / hr</div>
+        <p style="margin:6px 0 0;color:#6b7a86">
+          Smooth, gliding strokes with warm essential oils to melt daily stress and improve sleep.
+        </p>
       </div>
     </article>
 
     <article class="card">
-      <img src="images/Aroma-Therapy.jpg" alt="Aroma Therapy">
+      <img src="images/hot-stone.jpg" alt="Hot Stone">
       <div class="pad">
-        <h3>Aroma Therapy</h3>
-        <div class="price">500 THB / hr</div>
-        <p class="desc">Gentle essential-oil massage to calm the mind and improve sleep quality.</p>
+        <h3>Hot Stone Therapy</h3>
+        <div class="price">700 THB / hr</div>
+        <p style="margin:6px 0 0;color:#6b7a86">
+          Heated basalt stones release deep muscle tension — perfect for stiff neck, back, and shoulders.
+        </p>
       </div>
     </article>
 
@@ -128,8 +132,10 @@
       <img src="images/foot.jpg" alt="Foot Massage">
       <div class="pad">
         <h3>Foot Massage</h3>
-        <div class="price">300 THB / hr</div>
-        <p class="desc">Reflex-focused footwork to boost circulation and revive tired legs after beach or shopping.</p>
+        <div class="price">250 THB / hr</div>
+        <p style="margin:6px 0 0;color:#6b7a86">
+          Reflex-focused footwork to boost circulation and revive tired legs after beach or shopping.
+        </p>
       </div>
     </article>
 
@@ -137,29 +143,32 @@
       <img src="images/facial.jpg" alt="Luxury Facial">
       <div class="pad">
         <h3>Luxury Facial</h3>
-        <div class="price">500 THB / 60 min</div>
-        <p class="desc">Cleanse, mask, and soothing facial massage for a radiant glow and deep hydration.</p>
+        <div class="price">1,600 THB / 60 min</div>
+        <p style="margin:6px 0 0;color:#6b7a86">
+          Cleanse, mask, and soothing facial massage for a radiant glow and deep hydration.
+        </p>
       </div>
     </article>
   </div>
 
   <div style="text-align:center;margin-top:12px">
-    <a class="btn-outline" href="services.html">View Full Menu</a>
+    <a class="btn-outline" style="border-color:var(--teal);color:var(--teal)" href="services.html">View Full Menu</a>
   </div>
 </section>
 
 <!-- Map -->
 <section class="section" id="map">
   <h2 class="h2">Find Us</h2>
-  <p class="sub">Patong, Kathu, Phuket 83150 · Open daily 11:00am – 02:00am</p>
-  <div class="map-box">
-    <iframe title="Serenity Massage Phuket Map"
+  <p class="sub">Patong, Kathu, Phuket 83150 · Open daily 10:00 – 22:00</p>
+  <div style="max-width:1100px;margin:auto;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.08);background:#fff">
+    <iframe
+      title="Serenity Massage Phuket Map"
       src="https://www.google.com/maps?q=Serenity%20Massage%20Patong&output=embed"
-      width="100%" height="360" style="border:0" loading="lazy"></iframe>
+      width="100%" height="360" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <div class="map-links">
+  <div style="text-align:center;margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
     <a class="btn-outline" href="https://maps.google.com/?q=Serenity%20Massage%20Patong" target="_blank" rel="noopener">Open in Google Maps</a>
-    <a class="btn-outline" href="tel:0655366749">Call 065-536-6749</a>
+    <a class="btn-outline" href="tel:0890000000">Call 089-xxx-xxxx</a>
     <a class="btn-outline" href="https://line.me/R/ti/p/@076khewc" target="_blank" rel="noopener">Chat via LINE OA</a>
   </div>
 </section>
@@ -170,11 +179,11 @@
     <div>
       <h4>Serenity Massage Phuket</h4>
       <p>Patong, Kathu, Phuket 83150</p>
-      <p>Open daily 11:00am – 02:00am</p>
+      <p>Open daily 10:00 – 22:00</p>
     </div>
     <div>
       <h4>Contact</h4>
-      <p>📞 <a href="tel:0655366749">065-536-6749</a></p>
+      <p>📞 <a href="tel:0890000000">089-xxx-xxxx</a></p>
       <p>💬 <a href="https://line.me/R/ti/p/@076khewc" target="_blank" rel="noopener">Add LINE OA</a></p>
       <p>📍 <a href="https://maps.google.com/?q=Serenity%20Massage%20Patong" target="_blank" rel="noopener">Google Map</a></p>
     </div>
@@ -192,6 +201,5 @@
 function openDrawer(){document.getElementById('drawer').classList.add('active')}
 function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
 </script>
-
 </body>
 </html>
