@@ -1,117 +1,103 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>บริการนวด | Serenity Massage Phuket</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body { font-family: 'Prompt', sans-serif; margin:0; background:#f8fdfd; color:#333; }
-    header { background: linear-gradient(135deg, #0bb, #0b84a5); color:white; padding:15px; text-align:center; }
-    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
-    h2 { text-align:center; margin:25px 0; color:#0b6675; }
-    .services-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .card {
-      background:white;
-      border-radius:10px;
-      overflow:hidden;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
-      transition:transform .2s;
-    }
-    .card:hover { transform: scale(1.03); }
-    .card img { width:100%; height:180px; object-fit:cover; }
-    .card-body { padding:15px; text-align:center; }
-    .card-body h3 { margin:10px 0; font-size:1.2em; color:#0b6675; }
-    .price { color:#d9534f; font-size:1.1em; font-weight:bold; }
-    footer { text-align:center; padding:15px; background:#0b6675; color:white; margin-top:30px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เมนูสปา | Serenity Massage Phuket</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <h1>Serenity Massage Phuket</h1>
-  <nav>
-    <a href="index.html">หน้าแรก</a>
-    <a href="services.html">เมนูนวด</a>
-    <a href="about.html">ข้อมูลร้าน</a>
-  </nav>
+<header class="topbar">
+  <a class="brand" href="index.html"><img class="logo" src="logo.png" alt=""><span class="title">Serenity Massage Phuket</span></a>
+  <div style="display:flex;gap:8px">
+    <a class="booking" href="tel:0890000000">CALL</a>
+    <button class="burger hide-desktop" onclick="openDrawer()"><span></span></button>
+  </div>
 </header>
 
-<main>
-  <h2>🌸 รายการบริการของเรา 🌸</h2>
-  <div class="services-container">
-    
-    <div class="service-card">
-  <img src="images/foot-massage.jpg" alt="นวดเท้า">
-  <h3>💆‍♀️ นวดเท้า</h3>
-  <p>250 บาท/ชั่วโมง</p>
-</div>
-
-<div class="service-card">
-  <img src="images/thai.jpg" alt="นวดไทย">
-  <h3>🤲 นวดไทย</h3>
-  <p>300 บาท/ชั่วโมง</p>
-</div>
-
-<div class="service-card">
-  <img src="images/aroma.jpg" alt="นวดน้ำมันอโรม่า">
-  <h3>🌸 นวดน้ำมันอโรม่า</h3>
-  <p>500 บาท/ชั่วโมง</p>
-</div>
-
-    <div class="card">
-      <img src="images/luxury-aroma.jpg" alt="นวดอโรม่า Luxury">
-      <div class="card-body">
-        <h3>💎 นวดอโรม่า Luxury</h3>
-        <p class="price">600 บาท/ชั่วโมง</p>
-      </div>
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="shade" onclick="closeDrawer()"></div>
+  <div class="panel">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+      <button class="burger" onclick="closeDrawer()"><span></span></button>
     </div>
-
-    <div class="card">
-      <img src="images/herbal-massage.jpg" alt="นวดประคบสมุนไพร">
-      <div class="card-body">
-        <h3>🔥 นวดประคบสมุนไพร</h3>
-        <p class="price">700 บาท/ชั่วโมง</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/swedish-massage.jpg" alt="นวดสวีดิช">
-      <div class="card-body">
-        <h3>✨ นวดสวีดิช</h3>
-        <p class="price">800 บาท/ชั่วโมง</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/spa-scrub.jpg" alt="สปาตัว + สครับ">
-      <div class="card-body">
-        <h3>🌿 สปาตัว + สครับ</h3>
-        <p class="price">1,200 บาท</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/premium-course.jpg" alt="คอร์สนวดพรีเมียม">
-      <div class="card-body">
-        <h3>👑 คอร์สนวดพรีเมียม (2 ชม.)</h3>
-        <p class="price">1,500 บาท</p>
-      </div>
-    </div>
-
+    <nav class="menu">
+      <a href="index.html">หน้าแรก</a>
+      <a href="services.html">เมนูสปา</a>
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="about.html#contact">ติดต่อ</a>
+    </nav>
   </div>
-</main>
+</aside>
 
-<footer>
-  © 2025 Serenity Massage Phuket
+<section class="section">
+  <h2 class="h2">เมนูบริการทั้งหมด</h2>
+  <p class="sub">ราคาเป็นเงินบาทต่อระยะเวลามาตรฐาน — สามารถปรับเวลาได้</p>
+
+  <div class="grid">
+    <article class="card">
+      <img src="images/foot.jpg" alt="Foot Massage">
+      <div class="pad">
+        <h3>นวดเท้า <span class="badge">Relax</span></h3>
+        <p class="price">250 บาท / ชั่วโมง</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/massage-oil.jpg" alt="Aroma Oil">
+      <div class="pad">
+        <h3>นวดน้ำมันอโรม่า</h3>
+        <p class="price">500 บาท / ชั่วโมง</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/hot-stone.jpg" alt="Hot Stone">
+      <div class="pad">
+        <h3>นวดหินร้อน</h3>
+        <p class="price">700 บาท / ชั่วโมง</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/facial.jpg" alt="Luxury Facial">
+      <div class="pad">
+        <h3>นวดหน้า Luxury</h3>
+        <p class="price">1,600 บาท / 60 นาที</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/herbal.jpg" alt="Herbal Compress" onerror="this.src='images/massage-oil.jpg'">
+      <div class="pad">
+        <h3>นวดประคบสมุนไพร</h3>
+        <p class="price">700 บาท / ชั่วโมง</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/aroma-lux.jpg" alt="Aroma Luxury" onerror="this.src='images/massage-oil.jpg'">
+      <div class="pad">
+        <h3>นวดอโรม่า Luxury</h3>
+        <p class="price">600 บาท / ชั่วโมง</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="cols">
+    <div><h4>Serenity Massage Phuket</h4><p>Open 10:00 – 22:00</p></div>
+    <div><h4>จองคิว</h4><p>📞 <a href="tel:0890000000">089-xxx-xxxx</a></p><p>💬 <a href="https://line.me/R/ti/p/@076khewc" target="_blank">LINE OA</a></p></div>
+    <div><h4>เมนูด่วน</h4><p><a href="index.html">หน้าแรก</a></p><p><a href="about.html">เกี่ยวกับเรา</a></p></div>
+  </div>
+  <div class="copy">© 2025 Serenity Massage Phuket</div>
 </footer>
 
+<script>
+function openDrawer(){document.getElementById('drawer').classList.add('active')}
+function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
+</script>
 </body>
 </html>
