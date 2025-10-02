@@ -97,8 +97,12 @@ img{ max-width:100%; height:auto; display:block; }
    Hero
 --------------------------------*/
 .hero{
-  background: linear-gradient(135deg, var(--teal-1) 0%, #04484f 100%);
-  color:#fff; padding:64px 16px;
+  .footer, .footer a, .footer h4, .footer p {
+  color: #ffffff;   /* ตัวหนังสือขาว */
+}
+
+.footer a:hover {
+  color: #ffd700;   /* Hover เป็นสีทอง (เลือกเปลี่ยนได้) */
 }
 .hero-inner{ max-width: 980px; margin: 0 auto; text-align:center; }
 .hero-mark{ width:120px; height:auto; margin:0 auto 16px; }
