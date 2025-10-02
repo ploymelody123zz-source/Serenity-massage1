@@ -5,217 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>เมนูสปา | Serenity Massage Phuket</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
-<!-- Top bar -->
 <header class="topbar">
-  <a class="brand" href="index.html">
-    <img class="logo" src="logo.png" alt="Serenity Logo">
-    <span class="title">Serenity Massage Phuket</span>
-  </a>
-  <div style="display:flex;gap:8px">
-    <a class="booking" href="booking.html">BOOKING</a>
-    <button class="burger hide-desktop" aria-label="menu" onclick="openDrawer()"><span></span></button>
-  </div>
+  <a class="brand" href="index.html"><img class="logo" src="logo.png" alt=""><span class="title">Serenity Massage Phuket</span></a>
+  <a class="booking" href="booking.html">BOOKING</a>
 </header>
 
-<!-- Drawer -->
-<aside id="drawer" class="drawer" aria-hidden="true">
-  <div class="shade" onclick="closeDrawer()"></div>
-  <div class="panel">
-    <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
-      <button class="burger" onclick="closeDrawer()" aria-label="close"><span></span></button>
-    </div>
-    <nav class="menu">
-      <a href="index.html">หน้าแรก</a>
-      <a href="services.html">เมนูสปา</a>
-      <a href="about.html">เกี่ยวกับเรา</a>
-      <a href="index.html#map">แผนที่</a>
-      <a href="#contact">ติดต่อ</a>
-    </nav>
-  </div>
-</aside>
-
-<!-- Hero -->
-<section class="hero">
+<section class="hero small hero-gradient">
   <div class="hero-inner">
-    <h1>Serenity – Spa Menu</h1>
-    <p>เมนูจริงของร้านที่ Jungceylon • Real in-store menu (多语言 / متعدد اللغات / बहुभाषी)</p>
+    <h1 style="margin:0">Spa Menu</h1>
+    <p class="tagline">รายการและราคาจากเมนูหน้าร้าน — Multilingual</p>
   </div>
 </section>
 
-<!-- BODY MASSAGE -->
 <section class="section">
-  <h2 class="h2">Body Massage • นวดตัว • 全身按摩 • Массаж • تدليك • बॉडी मसाज</h2>
-  <p class="sub">ราคามาตรฐานต่อชั่วโมง • Standard prices per hour</p>
+  <h2 class="h2">Body Massage</h2>
+  <p class="sub">ราคามาตรฐานต่อชั่วโมง • Standard price per hour</p>
 
   <div class="grid">
-    <!-- Thai Massage -->
     <article class="card">
-      <img src="images/thai-massage.jpg" alt="Thai Massage" onerror="this.src='images/foot.jpg'">
-      <div class="pad">
-        <h3>THAI MASSAGE — นวดไทย</h3>
-        <p class="desc">
-          中文: 泰式按摩 • Рус: Тайский массаж • العربية: تدليك تايلاندي • हिंदी: थाई मसाज
-        </p>
-        <p class="price">300 THB / hour</p>
-      </div>
+      <h3>THAI MASSAGE — นวดไทย</h3>
+      <p class="desc">中文: 泰式按摩 • Рус: Тайский массаж • العربية: تدليك تايلاندي • हिंदी: थाई मसाज</p>
+      <p class="price">300 THB / hour</p>
     </article>
 
-    <!-- Oil Massage -->
     <article class="card">
-      <img src="images/massage-oil.jpg" alt="Oil Massage" onerror="this.src='images/massage-oil.jpg'">
-      <div class="pad">
-        <h3>OIL MASSAGE — นวดน้ำมัน</h3>
-        <p class="desc">
-          中文: 精油按摩 • Рус: Масляный массаж • العربية: تدليك بالزيت • हिंदी: तेल मालिश
-        </p>
-        <p class="price">350 THB / hour</p>
-      </div>
+      <h3>OIL MASSAGE — นวดน้ำมัน</h3>
+      <p class="desc">中文: 精油按摩 • Рус: Масляный массаж • العربية: تدليك بالزيت • हिंदी: तेल मालिश</p>
+      <p class="price">350 THB / hour</p>
     </article>
 
-    <!-- Foot Massage -->
     <article class="card">
-      <img src="images/foot.jpg" alt="Foot Massage">
-      <div class="pad">
-        <h3>FOOT MASSAGE — นวดเท้า</h3>
-        <p class="desc">
-          中文: 足部按摩 • Рус: Массаж ног • العربية: تدليك القدم • हिंदी: पैर की मालिश
-        </p>
-        <p class="price">300 THB / hour</p>
-      </div>
+      <h3>FOOT MASSAGE — นวดเท้า</h3>
+      <p class="desc">中文: 足部按摩 • Рус: Массаж ног • العربية: تدليك القدم • हिंदी: पैर की मालिश</p>
+      <p class="price">300 THB / hour</p>
     </article>
 
-    <!-- Thai + Oil Massage -->
     <article class="card">
-      <img src="images/thai-oil.jpg" alt="Thai + Oil Massage" onerror="this.src='images/massage-oil.jpg'">
-      <div class="pad">
-        <h3>THAI + OIL MASSAGE — นวดไทย + ออย</h3>
-        <p class="desc">
-          中文: 泰式+精油按摩 • Рус: Тайский + масляный массаж • العربية: تاي + زيت • हिंदी: थाई + ऑयल
-        </p>
-        <p class="price">400 THB / hour</p>
-      </div>
+      <h3>THAI + OIL MASSAGE — นวดไทย + ออย</h3>
+      <p class="desc">中文: 泰式+精油按摩 • Рус: Тайский + масляный массаж • العربية: تاي + زيت • हिंदी: थाई + ऑयल</p>
+      <p class="price">400 THB / hour</p>
     </article>
 
-    <!-- Sport Massage -->
     <article class="card">
-      <img src="images/sport.jpg" alt="Sport Massage" onerror="this.src='images/hot-stone.jpg'">
-      <div class="pad">
-        <h3>SPORT MASSAGE — นวดสปอร์ต</h3>
-        <p class="desc">
-          中文: 运动按摩 • Рус: Спортивный массаж • العربية: تدليك رياضي • हिंदी: स्पोर्ट मसाज
-        </p>
-        <p class="price">500 THB / hour</p>
-      </div>
+      <h3>SPORT MASSAGE — นวดสปอร์ต</h3>
+      <p class="desc">中文: 运动按摩 • Рус: Спортивный массаж • العربية: تدليك رياضي • हिंदी: स्पोर्ट मसाज</p>
+      <p class="price">500 THB / hour</p>
     </article>
 
-    <!-- Head Back Neck Massage -->
     <article class="card">
-      <img src="images/head-neck.jpg" alt="Head Back & Neck" onerror="this.src='images/hot-stone.jpg'">
-      <div class="pad">
-        <h3>HEAD + BACK & NECK — นวดหัว + หลัง + คอ</h3>
-        <p class="desc">
-          中文: 头部/背/颈按摩 • Рус: Массаж головы/спины/шеи • العربية: رأس + ظهر + رقبة • हिंदी: सिर + पीठ + गर्दन
-        </p>
-        <p class="price">500 THB / hour</p>
-      </div>
+      <h3>HEAD + BACK & NECK — นวดหัว+หลัง+คอ</h3>
+      <p class="desc">中文: 头部/背/颈 • Рус: Голова/спина/шея • العربية: رأس+ظهر+رقبة • हिंदी: सिर+पीठ+गर्दन</p>
+      <p class="price">500 THB / hour</p>
     </article>
   </div>
 </section>
 
-<!-- OIL / CREAM / GEL -->
 <section class="section">
-  <h2 class="h2">Oil / Cream / Gel Treatments</h2>
-  <p class="sub">ทรีตเมนต์เพิ่มความชุ่มชื้น ผิวเงาใส เย็นสบายหรือบำรุงล้ำลึก</p>
-
+  <h2 class="h2">Oil / Gel / Cream Treatments</h2>
   <div class="grid">
-    <!-- Coconut Oil -->
     <article class="card">
-      <img src="images/coconut.jpg" alt="Coconut Oil Massage" onerror="this.src='images/massage-oil.jpg'">
-      <div class="pad">
-        <h3>COCONUT OIL MASSAGE — นวดน้ำมันมะพร้าว</h3>
-        <p class="desc">中文: 椰子油按摩 • Рус: Кокосовый массаж • العربية: تدليك بزيت جوز الهند • हिंदी: नारियल तेल मसाज</p>
-        <p class="price">500 THB / hour</p>
-      </div>
+      <h3>COCONUT OIL MASSAGE — นวดน้ำมันมะพร้าว</h3>
+      <p class="desc">中文: 椰子油按摩 • Рус: Кокосовый массаж • العربية: تدليك بزيت جوز الهند • हिंदी: नारियल तेल मसाज</p>
+      <p class="price">500 THB / hour</p>
     </article>
 
-    <!-- Aloe Vera Massage -->
     <article class="card">
-      <img src="images/aloe.jpg" alt="Aloe Vera Massage" onerror="this.src='images/massage-oil.jpg'">
-      <div class="pad">
-        <h3>ALOE VERA MASSAGE — นวดเจลว่านหางจระเข้</h3>
-        <p class="desc">中文: 芦荟凝胶按摩 • Рус: Массаж с алоэ вера • العربية: مساج جل الصبار • हिंदी: एलोवेरा जेल मसाज</p>
-        <p class="price">500 THB / hour</p>
-      </div>
+      <h3>ALOE VERA MASSAGE — นวดเจลว่านหางจระเข้</h3>
+      <p class="desc">中文: 芦荟按摩 • Рус: Массаж с алоэ • العربية: جل الصبار • हिंदी: एलोवेरा मसाज</p>
+      <p class="price">500 THB / hour</p>
     </article>
 
-    <!-- Milk Cream Massage -->
     <article class="card">
-      <img src="images/milk-cream.jpg" alt="Milk Cream Massage" onerror="this.src='images/massage-oil.jpg'">
-      <div class="pad">
-        <h3>MILK CREAM MASSAGE — นวดครีมน้ำนม</h3>
-        <p class="desc">中文: 牛奶霜按摩 • Рус: Массаж молочным кремом • العربية: تدليك بكريم الحليب • हिंदी: मिल्क क्रीम मसाज</p>
-        <p class="price">400 THB / hour</p>
-      </div>
+      <h3>MILK CREAM MASSAGE — นวดครีมน้ำนม</h3>
+      <p class="desc">中文: 牛奶霜按摩 • Рус: Молочный крем • العربية: كريم الحليب • हिंदी: मिल्क क्रीम मसाज</p>
+      <p class="price">400 THB / hour</p>
     </article>
   </div>
 </section>
 
-<!-- FACIAL & FOOT CARE -->
 <section class="section">
-  <h2 class="h2">Facial & Foot Care • บำรุงหน้า & ดูแลเท้า</h2>
-
+  <h2 class="h2">Facial & Foot Care • ทำเล็บ</h2>
   <div class="grid">
-    <!-- Facial Massage -->
     <article class="card">
-      <img src="images/facial.jpg" alt="Facial Massage">
-      <div class="pad">
-        <h3>FACIAL MASSAGE — นวดหน้า</h3>
-        <p class="desc">中文: 面部按摩 • Рус: Массаж лица • العربية: تدليك للوجه • हिंदी: फेस मसाज</p>
-        <p class="price">500 THB / hour</p>
-      </div>
+      <h3>FACIAL MASSAGE — นวดหน้า</h3>
+      <p class="desc">中文: 面部按摩 • Рус: Массаж лица • العربية: تدليك الوجه • हिंदी: फेस मसाज</p>
+      <p class="price">500 THB / hour</p>
     </article>
 
-    <!-- Foot Scrub -->
     <article class="card">
-      <img src="images/foot-scrub.jpg" alt="Foot Scrub" onerror="this.src='images/foot.jpg'">
-      <div class="pad">
-        <h3>FOOT SCRUB — ขัดเท้า</h3>
-        <p class="desc">中文: 足部去角质 • Рус: Скраб для ног • العربية: تقشير القدم • हिंदी: फुट स्क्रब</p>
-        <p class="price">400 THB</p>
-      </div>
+      <h3>FOOT SCRUB — ขัดเท้า</h3>
+      <p class="desc">中文: 足部去角质 • Рус: Скраб для ног • العربية: تقشير القدم • हिंदी: फुट स्क्रब</p>
+      <p class="price">400 THB</p>
     </article>
 
-    <!-- Pedicure -->
     <article class="card">
-      <img src="images/pedicure.jpg" alt="Pedicure" onerror="this.src='images/foot.jpg'">
-      <div class="pad">
-        <h3>PEDICURE — ตัดเล็บเท้า</h3>
-        <p class="desc">中文: 修脚 • Рус: Педикюр • العربية: باديكير • हिंदी: पेडीक्योर</p>
-        <p class="price">250 THB</p>
-      </div>
+      <h3>PEDICURE — ตัดเล็บเท้า</h3>
+      <p class="desc">中文: 修脚 • Рус: Педикюр • العربية: باديكير • हिंदी: पेडीक्योर</p>
+      <p class="price">250 THB</p>
     </article>
 
-    <!-- Manicure -->
     <article class="card">
-      <img src="images/manicure.jpg" alt="Manicure" onerror="this.src='images/foot.jpg'">
-      <div class="pad">
-        <h3>MANICURE — ตัดเล็บมือ</h3>
-        <p class="desc">中文: 美甲 • Рус: Маникюр • العربية: مانيكير • हिंदी: मैनीक्योर</p>
-        <p class="price">250 THB</p>
-      </div>
+      <h3>MANICURE — ตัดเล็บมือ</h3>
+      <p class="desc">中文: 美甲 • Рус: Маникюр • العربية: مانيكير • हिंदी: मैनीक्योर</p>
+      <p class="price">250 THB</p>
     </article>
   </div>
 
-  <div style="text-align:center;margin-top:16px">
+  <div style="text-align:center;margin-top:12px">
     <a class="btn btn-primary" href="booking.html">จองคิว / Book Now</a>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer" id="contact">
   <div class="cols">
     <div>
