@@ -131,3 +131,20 @@ body{
 .nav a:hover{ background:#f3f6f7; }
 
 .site-footer{ text-align:center; padding:28px 12px; color:#5f6b73; }
+/* กันรูปใหญ่เกินจอทุกกรณี */
+img { max-width: 100%; height: auto; }
+
+/* โลโก้บนแถบหัวเว็บให้เล็กคงที่ */
+.brand-logo { width: 40px; height: 40px; object-fit: cover; border-radius: 50%; }
+
+/* โลโก้ใน hero (ถ้ามี) ให้ไม่เกิน 120px */
+.hero-mark, .hero-logo { width: 120px; height: auto; display: block; margin: 0 auto 12px; }
+
+/* กันภาพแบนเนอร์เผลอใส่แล้วสูงเกิน */
+.hero img.banner, .hero-banner { max-height: 220px; width: 100%; object-fit: cover; }
+
+/* ปุ่ม BOOKING ลอยเก่า—ปิดทิ้ง */
+.floating-booking, .book-fab, .booking-fab { display: none !important; }
+
+/* เฮดเดอร์ไม่ให้ทับข้อความ */
+.site-header { position: sticky; top: 0; z-index: 100; }
