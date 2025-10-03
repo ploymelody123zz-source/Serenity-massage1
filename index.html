@@ -1,110 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serenity Massage Phuket | Spa & Wellness</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serenity Massage | จองคิว</title>
+  <style>
+    /* 🎨 ตัวแปรสี */
+    :root { 
+      --brand:#009688;     /* เขียวทะเล */
+      --brand-2:#00bcd4;   /* ฟ้าอ่อน */
+      --bg:#e0f7fa;        /* พื้นหลังฟ้าอ่อน */
+      --text:#004d40;      /* เขียวเข้ม */
+    }
+
+    body{ 
+      margin:0; font-family:system-ui, Arial, sans-serif; color:var(--text);
+      background:var(--bg); padding:20px;
+    }
+    .card{ 
+      max-width:780px; margin:0 auto; background:#fff; border-radius:14px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08); overflow:hidden;
+    }
+
+    /* 🔹 ส่วนหัว */
+    header{
+      padding:24px; 
+      text-align:center; 
+      background:linear-gradient(135deg,var(--brand-2),var(--brand));
+      color:white;
+    }
+    header img{
+      width:80px; border-radius:50%; margin-bottom:10px;
+    }
+    h1{ margin:0 0 6px; font-size:28px; color:white; }
+    .sub{ color:#e0f2f1; margin:0 }
+
+    .wrap{ padding:20px; display:grid; gap:18px; }
+    .grid{ display:grid; gap:12px; grid-template-columns:1fr 1fr; }
+    @media (max-width:640px){ .grid{ grid-template-columns:1fr; } }
+    .row{ display:grid; gap:12px; grid-template-columns:1fr 1fr; }
+    @media (max-width:640px){ .row{ grid-template-columns:1fr; } }
+
+    label{font-weight:600; font-size:14px}
+    input, select, textarea{
+      width:100%; padding:12px 14px; border:1px solid #ddd; border-radius:10px;
+      font-size:16px; background:#fff;
+    }
+    textarea{ min-height:80px; resize:vertical; }
+
+    /* 🔹 ปุ่ม */
+    button {
+      padding: 12px 20px;
+      background-color: var(--brand);   /* เขียวทะเล */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: var(--brand-2);   /* ฟ้าอ่อน */
+    }
+
+    .note{ font-size:13px; color:#666; }
+    .ok{
+      display:none; padding:14px; border-radius:10px; background:#ecfdf5; color:#065f46;
+      border:1px solid #a7f3d0;
+    }
+
+    .actions{ display:grid; gap:10px; grid-template-columns:1fr 1fr; }
+    a.btn{
+      display:inline-block; text-align:center; text-decoration:none; padding:12px 14px;
+      border-radius:10px; border:1px solid #ddd; background:#fff; color:#222; font-weight:600;
+    }
+
+    iframe{ width:100%; height:260px; border:0; border-radius:10px; }
+    footer{ padding:18px; text-align:center; color:#777; font-size:13px }
+  </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="topbar">
-    <a href="index.html" class="brand">
-      <img src="logo.png" alt="Serenity Logo" class="logo">
-      <span class="title">Serenity Massage Phuket</span>
-    </a>
-    <div class="nav-right">
-      <a class="booking" href="services.html">BOOKING</a>
-      <button class="burger hide-desktop" onclick="openDrawer()">☰</button>
-    </div>
-  </header>
 
-  <!-- DRAWER -->
-  <aside id="drawer" class="drawer">
-    <div class="shade" onclick="closeDrawer()"></div>
-    <div class="panel">
-      <button class="close" onclick="closeDrawer()">✕</button>
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Spa Menu</a>
-        <a href="about.html">About Us</a>
-        <a href="#map">Map</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </aside>
+  <div class="card">
+    <header>
+      <img src="https://i.ibb.co/5K8xPBQ/spa-logo.png" alt="Serenity Logo">
+      <h1>Serenity Massage</h1>
+      <p class="sub">จองคิวกับเราได้ที่นี่ ✨</p>
+    </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-circle">
-      <img src="logo.png" alt="Serenity Logo">
-    </div>
-    <h1>Serenity Massage Phuket</h1>
-    <p class="slogan">"Every guest deserves a peaceful break"</p>
-    <a href="services.html" class="btn-outline">Explore Treatments →</a>
-  </section>
+    <div class="wrap">
 
-  <!-- ABOUT -->
-  <section class="section">
-    <h2>About Serenity</h2>
-    <p class="sub">Born in Patong, crafted by experienced therapists.</p>
-    <div class="story">
-      Starting as a small studio, Serenity has grown with a simple belief:  
-      every guest deserves a peaceful break. We carefully select natural products,  
-      keep the space bright and spotless, and train our therapists intensively —  
-      so you leave lighter and happier. ✨
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section class="section">
-    <h2>Why Guests Love Us</h2>
-    <div class="features">
-      <div class="feature"><div class="icon">🕯️</div><h3>Boutique Design</h3><p>Teal–gold palette, elegant and relaxing.</p></div>
-      <div class="feature"><div class="icon">🌿</div><h3>Natural Products</h3><p>Soothing oils & herbal aromas.</p></div>
-      <div class="feature"><div class="icon">👩‍⚕️</div><h3>Skilled Therapists</h3><p>Trained in both tradition & modern care.</p></div>
-      <div class="feature"><div class="icon">🫖</div><h3>Tea Ritual</h3><p>Complimentary herbal tea after session.</p></div>
-    </div>
-  </section>
-
-  <!-- MAP -->
-  <section class="section" id="map">
-    <h2>Find Us</h2>
-    <p class="sub">Patong, Kathu, Phuket 83150 · Open daily 10:00 – 22:00</p>
-    <div class="map-box">
-      <iframe src="https://www.google.com/maps?q=Serenity%20Massage%20Patong&output=embed"
-              width="100%" height="360" style="border:0" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="cols">
-      <div>
-        <h4>Serenity Massage Phuket</h4>
-        <p>Patong, Kathu, Phuket 83150</p>
-        <p>Open daily 10:00 – 22:00</p>
+      <!-- ปุ่มลัดการติดต่อ -->
+      <div class="actions">
+        <a class="btn" href="tel:+66-000-0000">📞 โทรจอง</a>
+        <a class="btn" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">💬 แชท LINE</a>
       </div>
+
+      <!-- ฟอร์มจองคิว -->
+      <form id="bookForm">
+        <div class="grid">
+          <div>
+            <label>ชื่อ-สกุล</label>
+            <input id="name" required placeholder="เช่น พิมพ์ดาว มณี" />
+          </div>
+          <div>
+            <label>เบอร์โทร</label>
+            <input id="phone" inputmode="tel" required placeholder="08x-xxx-xxxx" />
+          </div>
+        </div>
+
+        <div class="grid">
+          <div>
+            <label>บริการ</label>
+            <select id="service" required>
+              <option value="">— เลือกบริการ —</option>
+              <option>Foot Massage 60 นาที</option>
+              <option>Thai Massage 60 นาที</option>
+              <option>Aroma Oil 90 นาที</option>
+              <option>Back & Shoulder 30 นาที</option>
+            </select>
+          </div>
+          <div class="row">
+            <div>
+              <label>วันที่</label>
+              <input id="date" type="date" required />
+            </div>
+            <div>
+              <label>เวลา</label>
+              <input id="time" type="time" required />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label>หมายเหตุ (ถ้ามี)</label>
+          <textarea id="note" placeholder="เช่น ขอนวดแรง/เบา หรือแจ้งอาการเฉพาะจุด"></textarea>
+        </div>
+
+        <p class="note">หลังส่งแบบฟอร์ม ระบบจะบันทึกคำขอไว้ในเครื่องของคุณและแสดงสรุปทันที (ตัวอย่างสำหรับฝึก)</p>
+
+        <button type="submit">✨ ส่งคำขอจอง ✨</button>
+      </form>
+
+      <div id="ok" class="ok"></div>
+
+      <!-- แผนที่ -->
       <div>
-        <h4>Contact</h4>
-        <p>📞 <a href="tel:0890000000">089-xxx-xxxx</a></p>
-        <p>💬 <a href="https://line.me/R/ti/p/@076khewc" target="_blank">LINE OA</a></p>
-        <p>📍 <a href="https://maps.google.com/?q=Serenity%20Massage%20Patong" target="_blank">Google Map</a></p>
+        <label>แผนที่</label>
+        <iframe
+          src="https://www.google.com/maps?q=Patong,+Phuket&output=embed"
+          loading="lazy" allowfullscreen></iframe>
       </div>
-      <div>
-        <h4>Quick Links</h4>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="services.html">Spa Menu</a></p>
-        <p><a href="about.html">About</a></p>
-      </div>
+
     </div>
-    <div class="copy">© 2025 Serenity Massage Phuket • All rights reserved</div>
-  </footer>
+
+    <footer>© Serenity Massage</footer>
+  </div>
 
   <script>
-    function openDrawer(){document.getElementById('drawer').classList.add('active')}
-    function closeDrawer(){document.getElementById('drawer').classList.remove('active')}
+    // 🔹 ตั้งค่า min ของ input date = วันนี้
+    (function setMinDate(){
+      const d = new Date();
+      const pad = n => String(n).padStart(2,'0');
+      const min = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+      document.getElementById('date').setAttribute('min', min);
+    })();
+
+    // 🔹 จัดการส่งฟอร์ม
+    document.getElementById('bookForm').addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const data = {
+        name:  document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        service: document.getElementById('service').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        note: document.getElementById('note').value.trim(),
+        createdAt: new Date().toISOString()
+      };
+
+      if(!data.name || !data.phone || !data.service || !data.date || !data.time){
+        alert('กรอกข้อมูลให้ครบก่อนนะคะ'); return;
+      }
+
+      // เก็บข้อมูลไว้ในเครื่อง (localStorage)
+      const key = 'serenity_bookings';
+      const current = JSON.parse(localStorage.getItem(key) || '[]');
+      current.push(data);
+      localStorage.setItem(key, JSON.stringify(current));
+
+      // แสดงผลสรุป
+      const box = document.getElementById('ok');
+      box.style.display = 'block';
+      box.innerHTML =
+        `✅ รับคำขอของคุณแล้วค่ะ<br>
+         ชื่อ: <b>${data.name}</b> | เบอร์: <b>${data.phone}</b><br>
+         บริการ: <b>${data.service}</b><br>
+         วันที่: <b>${data.date}</b> เวลา: <b>${data.time}</b><br>
+         หมายเหตุ: ${data.note || '-'}<br><br>
+         <small>หมายเหตุ: ตัวอย่างนี้เก็บข้อมูลไว้ในเครื่องของคุณเท่านั้น</small>`;
+
+      this.reset();
+    });
   </script>
 </body>
 </html>
